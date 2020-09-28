@@ -8,4 +8,12 @@
         <result column="user_name" property="userName" />
     </resultMap>
 
+    <select id="findByUserId" resultMap="BaseResultMap">
+
+        select  * from test_user where user_id=#{userId}
+     </select>
+
+    <insert id="addUser">
+        insert into test_user(user_id,user_name) values (#{userId}, #{userName})
+    </insert>
 </mapper>

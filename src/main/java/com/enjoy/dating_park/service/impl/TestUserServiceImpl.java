@@ -23,4 +23,20 @@ public class TestUserServiceImpl extends ServiceImpl<TestUserMapper, TestUser> i
     public TestUser getTestUsers() {
         return baseMapper.selectById(1);
     }
+
+    @Override
+    public TestUser findByUserId(String userId) {
+        return baseMapper.findByUserId(userId);
+    }
+
+    @Override
+    public Boolean addUser(String userId, String userName) {
+
+        return baseMapper.addUser(userId,userName);
+    }
+
+    @Override
+    public Integer delUser(String userId) {
+        return baseMapper.deleteById(userId);
+    }
 }

@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -32,4 +33,20 @@ public class TestUserController {
     public Result<TestUser> getTestUsers(){
         return Result.success(testUserService.getTestUsers());
     }
+
+    @GetMapping("/findByUserId")
+    public Result<TestUser> getTestUserById(@RequestParam("userId") String userId){
+        return Result.success(testUserService.findByUserId(userId));
+    }
+
+    @GetMapping("/addUser")
+    public Result<Boolean> addUser(@RequestParam("userId") String userId,@RequestParam("userName")String userName){
+        return Result.success(testUserService.addUser(userId,userName));
+    }
+
+    @GetMapping("/delUser")
+    public Result<Integer> delUser(@RequestParam("userId") String userId){
+            return Result.success(testUserService.delUser(userId));
+    }
+
 }
