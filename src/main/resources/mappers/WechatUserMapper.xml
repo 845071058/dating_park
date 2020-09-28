@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.enjoy.dating_park.mapper.WechatUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.enjoy.dating_park.entity.WechatUser">
+        <id column="user_id" property="userId" />
+        <result column="openid" property="openid" />
+        <result column="nickname" property="nickname" />
+        <result column="sex" property="sex" />
+        <result column="province" property="province" />
+        <result column="city" property="city" />
+        <result column="country" property="country" />
+        <result column="headimgurl" property="headimgurl" />
+        <result column="myheadimgurl" property="myheadimgurl" />
+        <result column="unionid" property="unionid" />
+        <result column="my_name" property="myName" />
+        <result column="mobile" property="mobile" />
+        <result column="real_province" property="realProvince" />
+        <result column="real_city" property="realCity" />
+        <result column="real_country" property="realCountry" />
+        <result column="wechat_id" property="wechatId" />
+        <result column="real_sex" property="realSex" />
+        <result column="real_name" property="realName" />
+        <result column="birthday" property="birthday" />
+        <result column="height" property="height" />
+        <result column="weight" property="weight" />
+        <result column="constellation" property="constellation" />
+        <result column="educate" property="educate" />
+        <result column="school" property="school" />
+        <result column="introduce_me" property="introduceMe" />
+        <result column="system_integral" property="systemIntegral" />
+        <result column="activity_integral" property="activityIntegral" />
+        <result column="create_time" property="createTime" />
+        <result column="update_time" property="updateTime" />
+        <result column="share_user_id" property="shareUserId" />
+        <result column="reserve1" property="reserve1" />
+        <result column="reserve2" property="reserve2" />
+        <result column="reserve3" property="reserve3" />
+        <result column="reserve4" property="reserve4" />
+        <result column="reserve5" property="reserve5" />
+    </resultMap>
+
+</mapper>
